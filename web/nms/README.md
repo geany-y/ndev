@@ -1,3 +1,3 @@
-# test-project
+# nms
 
 a [Sails](http://sailsjs.org) application
