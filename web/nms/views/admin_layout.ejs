@@ -8,15 +8,15 @@
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<%=typeof baseUrl == 'undefined' ? '' : baseUrl%><
-	<link rel="stylesheet" href="<%= baseUrl %>/styles/admin/vendor.css">
-	<link rel="stylesheet" href="<%= baseUrl %>/styles/admin/flat-admin.css">
+	<% var siteroot = (typeof baseUrl == 'undefined' ? '' : baseUrl); %><
+	<link rel="stylesheet" href="<%= siteroot %>/styles/admin/vendor.css">
+	<link rel="stylesheet" href="<%= siteroot %>/styles/admin/flat-admin.css">
 
 	<!-- Theme -->
-	<link rel="stylesheet" href="<%= baseUrl %>/styles/admin/thema/blue-sky.css">
-	<link rel="stylesheet" href="<%= baseUrl %>/styles/admin/thema/blue.css">
-	<link rel="stylesheet" href="<%= baseUrl %>/styles/admin/thema/red.css">
-	<link rel="stylesheet" href="<%= baseUrl %>/styles/admin/thema/yellow.css">
+	<link rel="stylesheet" href="<%= siteroot %>/styles/admin/thema/blue-sky.css">
+	<link rel="stylesheet" href="<%= siteroot %>/styles/admin/thema/blue.css">
+	<link rel="stylesheet" href="<%= siteroot %>/styles/admin/thema/red.css">
+	<link rel="stylesheet" href="<%= siteroot %>/styles/admin/thema/yellow.css">
   </head>
 
   <body>
