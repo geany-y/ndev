@@ -14,12 +14,11 @@ module.exports = {
 	},
 
 	top: function(req, res) {
-		console.log(req.session);
 		res.view(
 			'admin/top',
 			{
 				baseUrl: req.headers.host,
-				//username: req.session.user.usename,
+				ausername: '管理者様',
 				layout: 'admin_layout'
 			}
 		);
