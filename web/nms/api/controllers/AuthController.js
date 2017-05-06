@@ -11,7 +11,7 @@ module.exports = {
 	login: function(req, res) {
 		passport.authenticate('local', function(err, user, info) {
 			if ((err) || (!user)) {
-					req.redirect('controlcenter/login',{message: info.message});
+					res.redirect({message: info.message},'controlcenter/login');
 			}
 			req.logIn(user, function(err) {
 				if (err) res.send(err);
