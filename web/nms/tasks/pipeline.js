@@ -20,13 +20,6 @@ var cssFilesToInject = [
   'styles/**/*.css'
 ];
 
-var cssFrontFilesToInject = [
-  'styles/front/*.css'
-];
-
-var cssAdminFilesToInject = [
-  'styles/admin/*.css'
-];
 
 // Client-side javascript files to inject in order
 // (uses Grunt-style wildcard/glob/splat expressions)
@@ -41,32 +34,6 @@ var jsFilesToInject = [
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   'js/**/*.js'
-];
-
-var jsAdminFilesToInject = [
-
-  // Load sails.io before everything else
-  'js/dependencies/sails.io.js',
-
-  // Dependencies like jQuery, or Angular are brought in here
-  'js/dependencies/**/*.js',
-
-  // All of the rest of your client-side js files
-  // will be injected here in no particular order.
-  'js/admin/*.js'
-];
-
-var jsFrontFilesToInject = [
-
-  // Load sails.io before everything else
-  'js/dependencies/sails.io.js',
-
-  // Dependencies like jQuery, or Angular are brought in here
-  'js/dependencies/**/*.js',
-
-  // All of the rest of your client-side js files
-  // will be injected here in no particular order.
-  'js/front/*.js'
 ];
 
 
@@ -116,3 +83,5 @@ module.exports.templateFilesToInject = templateFilesToInject.map(function(tplPat
   }
   return require('path').join('assets/',tplPath);
 });
+
+
