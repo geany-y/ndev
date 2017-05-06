@@ -14,13 +14,19 @@ module.exports = {
 	},
 
 	top: function(req, res) {
-		res.view(
-			'admin/top',
-			{
-				baseUrl: req.headers.host,
-				username: '管理者様',
-				layout: 'admin_layout'
+		AdminTop.find({type:'1'}).exec(function (err, topNotes){
+			if (err) {
+				return res.serverError('見出しが見つかりませんでした。');
 			}
-		);
+			console.log(topNotes);
+			res.view(
+				'admin/top',
+				{
+					baseUrl: req.headers.host,
+					username: '管理者様',
+					layout: 'admin_layout'
+				}
+			);
+		});
 	}
 };
