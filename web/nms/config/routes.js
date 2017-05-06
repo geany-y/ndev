@@ -64,4 +64,5 @@ module.exports.routes = {
 		view: '404'
 	},
 	'get /controlcenter/top': 'AdminController.top',
+	'post /controlcenter/top/edit': 'AdminTopController.edit',
 };
