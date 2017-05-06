@@ -15,7 +15,7 @@ module.exports = {
 	},
 
 	top: function(req, res) {
-		console.log(sails.LOOKS_LIKE_ASSET_RX);
+		console.log(req);
 		res.view(
 			'admin/top'
 		);
