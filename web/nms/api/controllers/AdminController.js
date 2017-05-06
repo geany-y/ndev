@@ -15,10 +15,10 @@ module.exports = {
 	},
 
 	top: function(req, res) {
-		console.log(req);
+		console.log(req.headers.host);
 		res.view(
 			'admin/top',
-			{baseUrl: req.baseUrl}
+			{baseUrl: req.headers.host}
 		);
 	}
 };
