@@ -34,6 +34,9 @@
             <div class="text-center">
                 <input type="submit" class="btn btn-success btn-submit" value="Login">
             </div>
+			<% if(!message){ %>
+				<div class="text-center"><p><%= message %></p></div>
+			<% } %>
         </form>
       </div>
       </div>

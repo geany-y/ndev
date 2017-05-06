@@ -11,7 +11,10 @@ module.exports = {
 	login: function(req, res) {
 		passport.authenticate('local', function(err, user, info) {
 			if ((err) || (!user)) {
-				return res.redirect('/404');
+				return res.view(
+					'/controlcenter/login',
+					{message: info.message}
+				);
 			}
 			req.logIn(user, function(err) {
 				if (err) res.send(err);
