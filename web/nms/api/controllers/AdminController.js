@@ -11,14 +11,13 @@ module.exports = {
 		actions: false,
 		shortcuts: false,
 		rest: false,
-		layout: 'admin_layout'
 	},
 
 	top: function(req, res) {
 		console.log(req.headers.host);
 		res.view(
 			'admin/top',
-			{baseUrl: req.headers.host}
+			{baseUrl: req.headers.host, layout: 'admin_layout'}
 		);
 	}
 };
