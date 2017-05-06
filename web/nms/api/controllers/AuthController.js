@@ -11,12 +11,7 @@ module.exports = {
 	login: function(req, res) {
 		passport.authenticate('local', function(err, user, info) {
 			if ((err) || (!user)) {
-				return res.view(
-					'admin/login',
-					{
-						message: info.message
-					}
-				);
+				return res.redirect('404');
 			}
 			req.logIn(user, function(err) {
 				if (err) res.send(err);

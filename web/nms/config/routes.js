@@ -50,7 +50,6 @@ module.exports.routes = {
 	view: 'admin/login',
 		locals: {
 				layout: 'admin_layout',
-				message: ''
 		}
 	},
 
