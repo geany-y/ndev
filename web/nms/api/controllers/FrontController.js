@@ -16,15 +16,14 @@ module.exports = {
 	top: function(req, res) {
 		AdminTop.find({type:'1'}).exec(function (err, topNotes){
 			if (err) {
-				return res.serverError('見出しが見つかりませんでした。');
+				res.redirect('/500')
 			}
 			res.view(
-				'admin/top',
+				'top',
 				{
 					baseUrl: req.headers.host,
-					username: '管理者様',
 					records: topNotes,
-					layout: 'admin_layout'
+					layout: 'layout'
 				}
 			);
 		});
