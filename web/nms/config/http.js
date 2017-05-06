@@ -36,6 +36,8 @@ module.exports.http = {
 		 'startRequestTimer',
 		 'cookieParser',
 		 'session',
+		 'passportInit',
+		 'passportSession',
 		 'myRequestLogger',
 		 'bodyParser',
 		 'handleBodyParserError',
@@ -47,9 +49,7 @@ module.exports.http = {
 		 'www',
 		 'favicon',
 		 '404',
-		 '500',
-		 'passportInit',
-		 'passportSession'
+		 '500'
 	],
 
   /****************************************************************************
