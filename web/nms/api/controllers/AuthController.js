@@ -12,10 +12,7 @@ module.exports = {
 
 		passport.authenticate('local', function(err, user, info) {
 			if ((err) || (!user)) {
-				return res.send({
-					message: info.message,
-					user: user
-				});
+				return res.redirect('/404');
 			}
 			req.logIn(user, function(err) {
 				if (err) res.send(err);
@@ -29,6 +26,6 @@ module.exports = {
 
 		logout: function(req, res) {
 			req.logout();
-			res.redirect('/');
+			res.redirect('/controlcenter/login');
 		}
 };
