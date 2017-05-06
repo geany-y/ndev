@@ -63,10 +63,5 @@ module.exports.routes = {
 	'/user': {
 		view: '404'
 	},
-	'get /controlcenter/top': {
-		view: 'admin/top',
-		locals: {
-			layout: 'admin_layout',
-		}
-	}
+	'get /controlcenter/top': 'AdminController.top',
 };

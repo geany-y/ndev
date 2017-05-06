@@ -36,6 +36,9 @@ module.exports.policies = {
   ***************************************************************************/
 	'PostController': {
 		'*': 'isAuthenticated'
+	},
+	'AdminController': {
+		'*': 'isAuthenticated'
 	}
   // RabbitController: {
 
