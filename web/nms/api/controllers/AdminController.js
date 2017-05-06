@@ -18,7 +18,7 @@ module.exports = {
 			'admin/top',
 			{
 				baseUrl: req.headers.host,
-				ausername: '管理者様',
+				username: '管理者様',
 				layout: 'admin_layout'
 			}
 		);
