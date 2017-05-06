@@ -19,7 +19,7 @@ module.exports = {
 			'admin/top',
 			{
 				baseUrl: req.headers.host,
-				username: req.session.user.usename,
+				//username: req.session.user.usename,
 				layout: 'admin_layout'
 			}
 		);
