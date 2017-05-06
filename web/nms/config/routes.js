@@ -57,19 +57,13 @@ module.exports.routes = {
 
   '/controlcenter/logout': 'AuthController.logout',
 
-  'get /controlcenter/signup': {
+  '/controlcenter/signup': {
     view: '/404',
 	locals: {
 		layout: 'admin_layout'
 	}
   },
-  'get /user': {
-    view: '/404',
-	locals: {
-		layout: 'admin_layout'
-	}
-  }
-  'get /user': {
+  '/user': {
     view: '/404',
 	locals: {
 		layout: 'admin_layout'
