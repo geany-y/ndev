@@ -13,7 +13,10 @@ module.exports = {
 			if ((err) || (!user)) {
 				return res.view(
 					'/controlcenter/login',
-					{message: info.message}
+					{
+						layout: 'admin_layout',
+						message: info.message
+					}
 				);
 			}
 			req.logIn(user, function(err) {
