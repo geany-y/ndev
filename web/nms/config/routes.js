@@ -62,8 +62,8 @@ module.exports.routes = {
   },
   'get /user': {
     view: '/404'
-  }
-  'post /user': {
+  },
+  'get /user': {
     view: '/404'
   }
 };
