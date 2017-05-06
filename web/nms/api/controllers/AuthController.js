@@ -15,7 +15,7 @@ module.exports = {
 			}
 			req.logIn(user, function(err) {
 				if (err) res.send(err);
-				return res.send('/controlcenter/top');
+				return res.redirect('/controlcenter/top');
 			});
 		})(req, res);
 	},
