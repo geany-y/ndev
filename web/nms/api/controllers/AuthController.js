@@ -12,9 +12,8 @@ module.exports = {
 		passport.authenticate('local', function(err, user, info) {
 			if ((err) || (!user)) {
 				return res.view(
-					'/controlcenter/login',
+					'admin/login',
 					{
-						layout: 'admin_layout',
 						message: info.message
 					}
 				);
