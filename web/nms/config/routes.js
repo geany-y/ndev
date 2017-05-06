@@ -46,10 +46,11 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-	'get /controlcenter/login': {
-		view: 'admin/login',
+  'get /controlcenter/login': {
+	view: 'admin/login',
+		message: '',
 		locals: {
-			layout: 'admin_layout'
+				layout: 'admin_layout'
 		}
 	},
 
