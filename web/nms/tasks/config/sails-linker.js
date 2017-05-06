@@ -40,7 +40,8 @@ module.exports = function(grunt) {
       files: {
         '.tmp/public/**/*.html': require('../pipeline').jsFilesToInject,
         'views/**/*.html': require('../pipeline').jsFilesToInject,
-        'views/**/*.ejs': require('../pipeline').jsFilesToInject
+        'views/*.ejs': require('../pipeline').jsFrontFilesToInject
+        'views/admin/*.ejs': require('../pipeline').jsAdminFrontFilesToInject
       }
     },
 
@@ -55,7 +56,7 @@ module.exports = function(grunt) {
       files: {
         '.tmp/public/**/*.html': require('../pipeline').jsFilesToInject,
         'views/**/*.html': require('../pipeline').jsFilesToInject,
-        'views/**/*.ejs': require('../pipeline').jsFilesToInject
+        'views/**/*.ejs': require('../pipeline').jsFilesToIVnject
       }
     },
 
@@ -100,6 +101,8 @@ module.exports = function(grunt) {
         '.tmp/public/**/*.html': require('../pipeline').cssFilesToInject,
         'views/**/*.html': require('../pipeline').cssFilesToInject,
         'views/**/*.ejs': require('../pipeline').cssFilesToInject
+        'views/*.ejs': require('../pipeline').cssFrontFilesToInject
+        'views/admin/*.ejs': require('../pipeline').cssAdminFrontFilesToInject
       }
     },
 
