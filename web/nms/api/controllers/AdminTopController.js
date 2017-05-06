@@ -14,13 +14,12 @@ module.exports = {
 	},
 
 	edit: function(req, res) {
-		res.view(
-			'admin/top',
-			{
-				baseUrl: req.headers.host,
-				username: '管理者様',
-				layout: 'admin_layout'
-			}
-		);
+        AdminTop.update({type: '1'},{body: req.param('body')}).exec(function afterwards(err, updated){
+
+          if (err) {
+            res.serverError(err);
+          }
+          res.redirect('/controlcenter/top');
+        });
 	}
 };

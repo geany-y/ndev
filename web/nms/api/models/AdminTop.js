@@ -19,7 +19,6 @@ module.exports = {
 		},
 		body: {
 			type: 'string',
-			minLength: 30,
 			required: true
 		},
 		order: {

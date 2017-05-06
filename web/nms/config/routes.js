@@ -60,7 +60,7 @@ module.exports.routes = {
 	'/controlcenter/signup': {
 		view: '404'
 	},
-	'/user': {
+	'/user/*': {
 		view: '404'
 	},
 	'get /controlcenter/top': 'AdminController.top',

@@ -39,6 +39,9 @@ module.exports.policies = {
 	},
 	'AdminController': {
 		'*': 'isAuthenticated'
+	},
+	'AdminTopController': {
+		'*': 'isAuthenticated'
 	}
   // RabbitController: {
 
