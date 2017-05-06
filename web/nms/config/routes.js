@@ -46,24 +46,27 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  'get /controlcenter/login': {
-	view: 'admin/login',
+	'get /controlcenter/login': {
+		view: 'admin/login',
 		locals: {
 				layout: 'admin_layout',
 		}
 	},
 
-  'post /controlcenter/login': 'AuthController.login',
+	'post /controlcenter/login': 'AuthController.login',
 
-  '/controlcenter/logout': 'AuthController.logout',
+	'/controlcenter/logout': 'AuthController.logout',
 
-  '/controlcenter/signup': {
-    view: '404'
-  },
-  '/user': {
-    view: '404'
-},
-'get /controlcenter/top': {
-	  view: 'admin/top'
-  }
+	'/controlcenter/signup': {
+		view: '404'
+	},
+	'/user': {
+		view: '404'
+	},
+	'get /controlcenter/top': {
+		view: 'admin/top',
+		locals: {
+			layout: 'admin_layout',
+		}
+	}
 };
