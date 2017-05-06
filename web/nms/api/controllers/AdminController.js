@@ -17,7 +17,8 @@ module.exports = {
 	top: function(req, res) {
 		console.log(req);
 		res.view(
-			'admin/top'
+			'admin/top',
+			{baseUrl: req.baseUrl}
 		);
 	}
 };
