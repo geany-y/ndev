@@ -18,7 +18,7 @@ module.exports = {
 			if (err) {
 				return res.serverError('見出しが見つかりませんでした。');
 			}
-			console.log(topNoteas);
+			console.log(topNotes.body);
 			res.view(
 				'admin/top',
 				{
