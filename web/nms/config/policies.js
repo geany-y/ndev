@@ -36,14 +36,7 @@ module.exports.policies = {
   ***************************************************************************/
 	'PostController': {
 		'*': 'isAuthenticated'
-	},
-	'*': [
-        // Initialize Passport
-        passport.initialize(),
-
-        // Use Passport's built-in sessions
-        passport.session()
-    ]
+	}
   // RabbitController: {
 
 		// Apply the `false` policy as the default for all of RabbitController's actions
