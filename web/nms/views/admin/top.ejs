@@ -10,27 +10,11 @@
 <div class="sidebar-menu">
   <ul class="sidebar-nav">
 	<li class="active">
-	  <a href="./index.html">
+	  <a href="#">
 		<div class="icon">
 		  <i class="fa fa-tasks" aria-hidden="true"></i>
 		</div>
-		<div class="title">Dashboard</div>
-	  </a>
-	</li>
-	<li class="@@menu.messaging">
-	  <a href="./messaging.html">
-		<div class="icon">
-		  <i class="fa fa-comments" aria-hidden="true"></i>
-		</div>
-		<div class="title">Messaging</div>
-	  </a>
-	</li>
-	<li class="dropdown ">
-	  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-		<div class="icon">
-		  <i class="fa fa-cube" aria-hidden="true"></i>
-		</div>
-		<div class="title">UI Kits</div>
+		<div class="title">管理画面トップ</div>
 	  </a>
 	</li>
 	<li class="dropdown">
@@ -197,33 +181,17 @@
 		</div>
 	  </li>
 	  <li class="dropdown profile">
-		<a href="/html/pages/profile.html" class="dropdown-toggle"  data-toggle="dropdown">
-		  <img class="profile-img" src="./assets/images/profile.png">
+		<a href="#" class="dropdown-toggle"  data-toggle="dropdown">
+		  <img class="profile-img" src="<%= siteroot %>/images/profile.png">
 		  <div class="title">Profile</div>
 		</a>
 		<div class="dropdown-menu">
 		  <div class="profile-info">
-			<h4 class="username">Scott White</h4>
+			<h4 class="username"><%= typeof username === 'undifined' : '' ? username %></h4>
 		  </div>
 		  <ul class="action">
 			<li>
-			  <a href="#">
-				Profile
-			  </a>
-			</li>
-			<li>
-			  <a href="#">
-				<span class="badge badge-danger pull-right">5</span>
-				My Inbox
-			  </a>
-			</li>
-			<li>
-			  <a href="#">
-				Setting
-			  </a>
-			</li>
-			<li>
-			  <a href="#">
+			  <a href="/controlcenter/logout">
 				Logout
 			  </a>
 			</li>
