@@ -13,7 +13,7 @@ module.exports = {
 			if ((err) || (!user)) {
 				return res.redirect('/404');
 			}
-			console.log(req);
+			console.log(user);
 			req.logIn(user, function(err) {
 				if (err) res.send(err);
 				return res.send({
