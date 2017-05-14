@@ -13,18 +13,21 @@
 		<% siteroot = (typeof baseUrl == 'undefined' ? '' : 'http://' + baseUrl) %>
 		<!-- <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400,300,700' rel='stylesheet' type='text/css'> -->
 		<!--[if lte IE 8]><script src="<%= siteroot %>/js/front/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" href="<%= siteroot %>/styles/front/skel-noscript.css" />
+        <link rel="stylesheet" href="<%= siteroot %>/styles/front/style.css" />
+        <link rel="stylesheet" href="<%= siteroot %>/styles/front/style-desktop.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="<%= siteroot %>/styles/front/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="<%= siteroot %>/styles/front/ie/v9.css" /><![endif]-->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="<%= siteroot %>/js/front/skel.min.js"></script>
 		<script src="<%= siteroot %>/js/front/skel-panels.min.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="<%= siteroot %>/styles/front/skel-noscript.css" />
-			<link rel="stylesheet" href="<%= siteroot %>/styles/front/style.css" />
-			<link rel="stylesheet" href="<%= siteroot %>/styles/front/style-desktop.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="<%= siteroot %>/styles/front/ie/v8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="<%= siteroot %>/styles/front/ie/v9.css" /><![endif]-->
+        <script type="text/javascript">
+        $(function(){
+            $("body").css("visibility","visible");
+        });
+        </script>
 	</head>
-	<body class="left-sidebar">
+	<body class="left-sidebar" style="visibility:hidden;">
 
 		<%- body %>
 
